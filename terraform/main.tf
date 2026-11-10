@@ -1,5 +1,7 @@
 # This is the "blueprint" for our container registry
 resource "aws_ecr_repository" "devops_repo" {
+  #checkov:skip=CKV_AWS_136: ECR uses AWS-managed AES256 encryption by default; customer-managed KMS adds key cost and administration for this demo repository.
+
   # The name for your repository
   name = "devops-repo"
 
